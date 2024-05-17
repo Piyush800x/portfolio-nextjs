@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-black text-white py-4 px-6 flex justify-between items-center">
+    <nav className="bg-black text-white py-4 px-6 flex justify-between items-center sticky z-10">
       <div className="text-2xl invert-on-hover">PIYUSH PAUL</div>
       <div className="hidden md:flex space-x-6">
           <Link href="/" className='transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Home</Link>
@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           <Link href="/about" className='transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>About</Link>
           <Link href="/resume" className='transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Resume</Link>
       </div>
-      <button className="hidden md:block bg-white text-black py-2 px-4 rounded-xl text-lg font-medium transition ease-in-out delay-50 hover:bg-gray-200 hover:drop-shadow-lg hover:shadow-gray-500/50 hover:-translate-y-1 hover:scale-110">
+      <button className="hidden md:block border-2 hover:border-white hover:bg-black hover:text-white bg-white text-black py-2 px-4 rounded-full text-lg font-medium transition ease-in-out duration-300">
         HIRE ME
       </button>
       <div className="md:hidden flex items-center">
@@ -36,11 +36,11 @@ const Navbar: React.FC = () => {
         </button>
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden absolute top-16 left-0 w-full bg-black flex flex-col items-center space-y-4 py-4`}>
-        <Link onClick={() => setIsOpen(false)} href="/">Home</Link>
-        <Link onClick={() => setIsOpen(false)} href="/projects">Projects</Link>
-        <Link onClick={() => setIsOpen(false)} href="/about">About</Link>
-        <Link onClick={() => setIsOpen(false)}href="/resume">Resume</Link>
-        <button className="bg-white text-black py-2 px-4 rounded-full transition ease-in-out delay-50 hover:bg-gray-200 hover:drop-shadow-lg hover:shadow-gray-500/50 hover:-translate-y-1 hover:scale-110">HIRE ME</button>
+        <Link onClick={() => setIsOpen(false)} href="/" className='transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Home</Link>
+        <Link onClick={() => setIsOpen(false)} href="/projects" className='transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Projects</Link>
+        <Link onClick={() => setIsOpen(false)} href="/about" className='transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>About</Link>
+        <Link onClick={() => setIsOpen(false)} href="/resume" className='transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Resume</Link>
+        <button className="border-2 hover:border-white hover:bg-black hover:text-white bg-white text-black py-2 px-4 rounded-full transition duration-300">HIRE ME</button>
       </div>
     </nav>
   );
