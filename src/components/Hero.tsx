@@ -39,15 +39,13 @@ export default function Hero() {
                 </div>
             </div>
             <div className={inter.className}>
-                <div className='flex items-center justify-center bg-black'>
-                    <div className='flex justify-between items-center'>
-                        <h1 className='text-white font-medium text-3xl'>Participated in</h1>
-                        <div className='flex gap-6'>
+                    <div className="flex flex-col justify-between items-center bg-black text-white p-4 md:flex-row md:justify-between md:items-center">
+                        <span className='text-white font-medium text-xl text-center md:text-center md:ml-10 ml-0'>Participated in</span>
+                        <div className='flex justify-center md:justify-end mt-4 md:mt-0 md:space-x-10 mb-10 md:mr-10'>
                             <Image className='grayscale' src={'img/SIH_Logo.svg'} alt='SIH' width={238} height={103}/>
                             <Image className='grayscale' src={'img/JISTECH.svg'} alt='SIH' width={216} height={104}/>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     )
