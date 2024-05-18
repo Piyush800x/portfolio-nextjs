@@ -20,7 +20,6 @@ export default function Home() {
       <Statistics/>
       <CTA/>
       <Footer/>
-      Hello World
     </main>
   );
 }

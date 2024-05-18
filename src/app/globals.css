@@ -554,20 +554,16 @@ video {
   --tw-contain-style:  ;
 }
 
-.static {
-  position: static;
-}
-
 .absolute {
   position: absolute;
 }
 
-.relative {
-  position: relative;
-}
-
 .sticky {
   position: sticky;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .left-0 {
@@ -578,25 +574,8 @@ video {
   top: 4rem;
 }
 
-.top-10 {
-  top: 2.5rem;
-}
-
-.bottom-10 {
-  bottom: 2.5rem;
-}
-
-.bottom-0 {
-  bottom: 0px;
-}
-
 .z-10 {
   z-index: 10;
-}
-
-.mx-16 {
-  margin-left: 4rem;
-  margin-right: 4rem;
 }
 
 .mx-20 {
@@ -664,10 +643,6 @@ video {
   display: flex;
 }
 
-.inline-flex {
-  display: inline-flex;
-}
-
 .hidden {
   display: none;
 }
@@ -693,10 +668,6 @@ video {
   height: 1.5rem;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
 .w-11\/12 {
   width: 91.666667%;
 }
@@ -707,10 +678,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-10 {
-  width: 2.5rem;
 }
 
 .transform {
@@ -765,11 +732,6 @@ video {
        column-gap: 4rem;
 }
 
-.gap-x-20 {
-  -moz-column-gap: 5rem;
-       column-gap: 5rem;
-}
-
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -794,24 +756,9 @@ video {
   border-radius: 0.75rem;
 }
 
-.rounded-b-xl {
-  border-bottom-right-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-}
-
-.rounded-b-2xl {
-  border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-}
-
 .rounded-b-3xl {
   border-bottom-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
-}
-
-.rounded-b-full {
-  border-bottom-right-radius: 9999px;
-  border-bottom-left-radius: 9999px;
 }
 
 .border-2 {
@@ -911,42 +858,28 @@ video {
   padding-bottom: 1rem;
 }
 
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
-.px-28 {
-  padding-left: 7rem;
-  padding-right: 7rem;
-}
-
 .pb-1 {
   padding-bottom: 0.25rem;
 }
 
-.pb-14 {
-  padding-bottom: 3.5rem;
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .pb-20 {
   padding-bottom: 5rem;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
 .pt-10 {
   padding-top: 2.5rem;
 }
 
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pb-10 {
-  padding-bottom: 2.5rem;
 }
 
 .text-left {
@@ -972,11 +905,6 @@ video {
   line-height: 2.5rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -995,11 +923,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -1060,12 +983,6 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1277,30 +1194,20 @@ video {
     padding-bottom: 1rem;
   }
 
-  .md\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  .md\:pb-0 {
+    padding-bottom: 0px;
   }
 
-  .md\:py-14 {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+  .md\:pb-10 {
+    padding-bottom: 2.5rem;
   }
 
   .md\:pl-16 {
     padding-left: 4rem;
   }
 
-  .md\:pb-14 {
-    padding-bottom: 3.5rem;
-  }
-
   .md\:pt-10 {
     padding-top: 2.5rem;
-  }
-
-  .md\:pb-10 {
-    padding-bottom: 2.5rem;
   }
 
   .md\:pt-14 {
@@ -1325,13 +1232,13 @@ video {
     line-height: 1;
   }
 
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
   .md\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
