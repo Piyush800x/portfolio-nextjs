@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
           <Link href="/resume" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Resume</Link>
       </div>
       <button className="cursor-none hidden md:block border-2 hover:border-white hover:bg-black hover:text-white bg-white text-black py-2 px-4 rounded-full text-lg font-medium transition ease-in-out duration-300">
-        HIRE ME
+        <Link className='cursor-none' href="/hireme">HIRE ME</Link>
       </button>
       <div className="md:hidden flex items-center">
         <button onClick={toggleMenu} className="cursor-none focus:outline-none">
