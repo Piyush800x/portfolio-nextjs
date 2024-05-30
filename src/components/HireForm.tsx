@@ -38,22 +38,23 @@ export default function HireForm() {
         event.preventDefault();
         setIsLoading(true);
 
-        try {
-            const response = await fetch('api/hireme/submit', {
-                method: "POST", 
-                body: formData,
-            })
+        // try {
+        //     const response = await fetch('api/hireme/submit', {
+        //         method: "POST", 
+        //         body: formData,
+        //     })
 
-            const data = await response.json();
-        }
-        catch (error) {
-            console.error(error);
-        }
-        finally {
-            setIsLoading(false);
-        }
+        //     const data = await response.json();
+        // }
+        // catch (error) {
+        //     console.error(error);
+        // }
+        // finally {
+        //     setIsLoading(false);
+        // }
 
         console.log(formData)
+        setIsLoading(false);
     }
     // fix hydration error
     return (
