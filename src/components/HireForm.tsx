@@ -38,22 +38,26 @@ export default function HireForm() {
         event.preventDefault();
         setIsLoading(true);
 
-        // try {
-        //     const response = await fetch('api/hireme/submit', {
-        //         method: "POST", 
-        //         body: formData,
-        //     })
+        try {
+            const response = await fetch('api/submit', {
+                method: "POST", 
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
 
-        //     const data = await response.json();
-        // }
-        // catch (error) {
-        //     console.error(error);
-        // }
-        // finally {
-        //     setIsLoading(false);
-        // }
+            const data = await response.json();
+            console.log(data)
+        }
+        catch (error) {
+            console.error(error);
+        }
+        finally {
+            setIsLoading(false);
+        }
 
-        console.log(formData)
+        // console.log(formData)
         setIsLoading(false);
     }
     // fix hydration error
@@ -71,30 +75,30 @@ export default function HireForm() {
                                 {/* basic details */}
                                 <h1 className="font-light text-2xl mb-6 pb-5">Basic Details</h1>
                                 <div className="w-full md:px-0 px-6">
-                                    <label className="block text-md font-medium text-white">Full Name</label>
+                                    <label className="cursor-none block text-md font-medium text-white">Full Name</label>
                                     <input name="name" onChange={handleChange} value={formData.name} type="name" required className="cursor-none border-b border-white mt-1 block w-full py-2 bg-black ring-0 shadow-sm focus:outline-none text-white" placeholder="John Doe" />
                                 </div>
                                 <div className="w-full mt-5 md:px-0 px-6">
-                                    <label className="block text-md font-medium text-white ">Email Address</label>
+                                    <label className="cursor-none block text-md font-medium text-white ">Email Address</label>
                                     <input name="email" value={formData.email} onChange={handleChange} type="email" required className="cursor-none border-b border-white mt-1 block w-full  py-2 bg-black ring-0 shadow-sm focus:outline-none text-white" placeholder="example@example.com" />
                                 </div>
                                 <div className="w-full mt-5 md:px-0 px-6">
-                                    <label className="block text-md font-medium text-white ">Phone Number</label>
+                                    <label className="cursor-none block text-md font-medium text-white ">Phone Number</label>
                                     <input name="phone" value={formData.phone} onChange={handleChange} type="number" required className="cursor-none border-b border-white mt-1 block w-full  py-2 bg-black ring-0 shadow-sm focus:outline-none text-white" placeholder="+91 1234567890" />
                                 </div>
                                 {/* project details */}
                                 <h1 className="font-light text-2xl mb-6 pb-5 mt-10">Project Details</h1>
                                 <div className="w-full mt-5 md:px-0 px-6">
-                                    <label className="block text-md font-medium text-white pb-5">Project Details</label>
+                                    <label className="cursor-none block text-md font-medium text-white pb-5">Project Details</label>
                                     <textarea name="project_details" value={formData.project_details} onChange={handleChange} required className="cursor-none mt-1 block w-full py-2 px-2 bg-black border border-white shadow-sm focus:outline-none text-white" placeholder="Please Describe Your Project"></textarea>
                                 </div>
                                 <div className="w-full mt-5 md:px-0 px-6">
-                                    <label className="block text-md font-medium text-white ">Budget {`(₹)`}</label>
+                                    <label className="cursor-none block text-md font-medium text-white ">Budget {`(₹)`}</label>
                                     <input name="budget" value={formData.budget} onChange={handleChange} type="text" required className="cursor-none border-b border-white mt-1 block w-full  py-2 bg-black ring-0 shadow-sm focus:outline-none text-white" placeholder="Enter Your Budget" />
                                 </div>
                                 <div className="w-full mt-5 md:px-0 px-6">
                                     <div className="">
-                                        <label className="block text-md font-medium text-white mb-1">Service Type</label>
+                                        <label className="cursor-none block text-md font-medium text-white mb-1">Service Type</label>
                                     </div>
                                     <select name="service" onChange={handleChange} value={formData.service} required className="cursor-none mt-4 block w-full py-2 bg-black border border-white focus:outline-none text-white">
                                         <option className="cursor-none">Select Service Type</option>
