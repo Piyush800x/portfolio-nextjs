@@ -3,7 +3,6 @@ import nodemailer from 'nodemailer';
 import { headers } from "next/headers";
 import { type NextRequest, NextResponse } from "next/server";
 import Mail from 'nodemailer/lib/mailer';
-import MailTemplate from "@/components/MailTemplate";
 // import { NextApiRequest, NextApiResponse } from 'next';
 
 export async function POST(req: NextRequest) {
