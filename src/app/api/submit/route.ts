@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 import { headers } from "next/headers";
 import { type NextRequest, NextResponse } from "next/server";
 import Mail from 'nodemailer/lib/mailer';
-// import { NextApiRequest, NextApiResponse } from 'next';
+
 
 export async function POST(req: NextRequest) {
     if (req.method != 'POST')   {
@@ -38,8 +38,8 @@ export async function POST(req: NextRequest) {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Project:</strong> ${project_details}</p>
-        <p><strong>Phone:</strong> ${budget}</p>
-        <p><strong>Phone:</strong> ${service}</p>
+        <p><strong>Budget:</strong> ${budget}</p>
+        <p><strong>Service:</strong> ${service}</p>
         `
     }
 

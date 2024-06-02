@@ -29,6 +29,7 @@ export default function HireForm() {
     })
 
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [buttonText, setButtonText] = useState<string>('HIRE ME');
 
     const handleChange = (event: any) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -48,13 +49,18 @@ export default function HireForm() {
             })
 
             const data = await response.json();
-            console.log(data)
+            console.log(data.message)
+            setButtonText(data.message)
         }
         catch (error) {
+            setButtonText('Internal Server Error!');
             console.error(error);
         }
         finally {
-            setIsLoading(false);
+            setTimeout(() => {
+                setButtonText("HIRE ME")
+                setIsLoading(false);
+            }, 2000)
         }
 
         // console.log(formData)
@@ -109,7 +115,7 @@ export default function HireForm() {
                                     </select>
                                 </div>
                                 <button className="mt-10 mb-10 text-xl cursor-none border-2 hover:border-white hover:bg-black hover:text-white bg-white text-black py-2 px-4 rounded-full transition duration-300">
-                                    {isLoading ? "Loading..." : "HIRE ME"}
+                                    {isLoading ? "Loading..." : `${buttonText}`}
                                 </button>
                             </div>    
                         </form>    

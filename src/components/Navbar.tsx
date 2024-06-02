@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
           <Link href="/" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Home</Link>
           <Link href="/projects" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Projects</Link>
           <Link href="/about" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>About</Link>
-          <Link href="/resume" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Resume</Link>
+          <Link href="/contact" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Contact</Link>
       </div>
       <button className="cursor-none hidden md:block border-2 hover:border-white hover:bg-black hover:text-white bg-white text-black py-2 px-4 rounded-full text-lg font-medium transition ease-in-out duration-300">
         <Link className='cursor-none' href="/hireme">HIRE ME</Link>
@@ -39,8 +39,10 @@ const Navbar: React.FC = () => {
         <Link onClick={() => setIsOpen(false)} href="/" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Home</Link>
         <Link onClick={() => setIsOpen(false)} href="/projects" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Projects</Link>
         <Link onClick={() => setIsOpen(false)} href="/about" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>About</Link>
-        <Link onClick={() => setIsOpen(false)} href="/resume" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Resume</Link>
-        <button className="cursor-none border-2 hover:border-white hover:bg-black hover:text-white bg-white text-black py-2 px-4 rounded-full transition duration-300">HIRE ME</button>
+        <Link onClick={() => setIsOpen(false)} href="/contact" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Contact</Link>
+        <button className="cursor-none border-2 hover:border-white hover:bg-black hover:text-white bg-white text-black py-2 px-4 rounded-full transition duration-300">
+          <Link className='cursor-none' href="/hireme">HIRE ME</Link>
+        </button>
       </div>
     </nav>
   );
