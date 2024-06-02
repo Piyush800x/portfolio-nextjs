@@ -20,7 +20,7 @@ export default function CTA() {
                     <h1>Working with me?</h1>
                 </div>
                 <div className={`${inter.className} flex justify-center items-center px-10 md:pt-10 md:pb-10 pt-4 pb-10 font-bold`}>
-                    <Link href='/' className="cursor-none border-2 hover:border-white bg-white text-black py-2 px-4 rounded-full hover:bg-black hover:text-white transition ease-in-out duration-300 ">GET IN TOUCH</Link>
+                    <Link href='/hireme' className="cursor-none border-2 hover:border-white bg-white text-black py-2 px-4 rounded-full hover:bg-black hover:text-white transition ease-in-out duration-300 ">GET IN TOUCH</Link>
                 </div>
             </div>
             <div className="flex flex-row justify-center items-center">
