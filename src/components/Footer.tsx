@@ -13,12 +13,12 @@ export default function Footer() {
         <div className={`${inter.className} bg-black  text-white`}>
             <div className="flex md:flex-row flex-col justify-between items-center mx-20 pt-10 pb-10">
                 <div className="flex flex-wrap">
-                    <h1 className="text-2xl md:pb-0 pb-5">OM</h1>
+                    <h1 className="text-2xl md:pb-0 pb-5">Piyush Paul</h1>
                 </div>
                 <div className="flex flex-row gap-x-10">
                     <Link href='/' className="cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110">Home</Link>
-                    <Link href='/' className="cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110">About</Link>
-                    <Link href='/' className="cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110">Contact me</Link>
+                    <Link href='/about' className="cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110">About</Link>
+                    <Link href='/contact' className="cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110">Contact me</Link>
                 </div>
             </div>
             <div className="flex md:flex-row flex-col justify-between items-center mx-20 pb-10">
