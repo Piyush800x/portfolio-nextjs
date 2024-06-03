@@ -1,8 +1,10 @@
 'use server';
 import nodemailer from 'nodemailer';
-import { headers } from "next/headers";
 import { type NextRequest, NextResponse } from "next/server";
 import Mail from 'nodemailer/lib/mailer';
+import { render } from '@react-email/render';
+import {MailTemplate} from '@/components/MailTemplateClient';
+import { MailTemplateSelf } from '@/components/MailTemplateSelf';
 
 
 export async function POST(req: NextRequest) {
@@ -26,21 +28,15 @@ export async function POST(req: NextRequest) {
         },
     });
 
+    const emailHtml = render(MailTemplate({name: name}))
+    const emailHtmlSelf = render(MailTemplateSelf({name: name, phone: phone, email: email, project: project_details, budget: budget, service: service}))
+
     // Send email to client
     const mailToClient: Mail.Options = {
         from: process.env.BUSINESS_MAIL,
         to: email,
         subject: `Order confirmation from Piyush Paul`,
-        html: `
-        <h1>Thank you for your interest!</h1>
-        <h1>We will get back to you soon</h1>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Project:</strong> ${project_details}</p>
-        <p><strong>Budget:</strong> ${budget}</p>
-        <p><strong>Service:</strong> ${service}</p>
-        `
+        html: emailHtml
     }
 
     // Mail to self
@@ -48,15 +44,7 @@ export async function POST(req: NextRequest) {
         from: process.env.BUSINESS_MAIL,
         to: process.env.MY_EMAIL,
         subject: `Order from ${name} |  number: ${phone}, email: ${email}, service: ${service}`,
-        html: `
-        <h1>Hire Me Form Submission</h1>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Project:</strong> ${project_details}</p>
-        <p><strong>Phone:</strong> ${budget}</p>
-        <p><strong>Phone:</strong> ${service}</p>
-        `
+        html: emailHtmlSelf
     }
 
     // Send mail

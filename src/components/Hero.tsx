@@ -32,8 +32,8 @@ export default function Hero() {
                             <h1 className='text-white font-normal text-md'>I can develop and maintain your services so you can sleep well</h1>
                         </div>
                         <div className='flex flex-row justify-center items-center gap-5 font-medium text-lg mb-8 '>
-                            <Link href='/' className="cursor-none border-2 hover:border-white bg-white text-black py-2 px-4 rounded-full hover:bg-black hover:text-white transition ease-in-out duration-300 ">CONTACT ME</Link>
-                            <Link href='/' className="cursor-none overflow-hidden border-2 border-white bg-black text-white py-2 px-4 rounded-full hover:bg-white hover:text-black transition ease-in-out duration-300 invert-on-hover">VIEW PROJECTS</Link>
+                            <Link href='/contact' className="cursor-none border-2 hover:border-white bg-white text-black py-2 px-4 rounded-full hover:bg-black hover:text-white transition ease-in-out duration-300 ">CONTACT ME</Link>
+                            <Link href='/projects' className="cursor-none overflow-hidden border-2 border-white bg-black text-white py-2 px-4 rounded-full hover:bg-white hover:text-black transition ease-in-out duration-300 invert-on-hover">VIEW PROJECTS</Link>
                         </div>
                     </div>
                 </div>

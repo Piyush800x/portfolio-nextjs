@@ -37,3 +37,6 @@ next-env.d.ts
 
 src/app/input.css
 cmd.txt
+src/app/dashboard
+src/app/signin
+src/app/signup
