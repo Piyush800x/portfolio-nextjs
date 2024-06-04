@@ -22,7 +22,7 @@ export function MailTemplateSelf({name, email, phone, project, budget, service}:
     return (
         <Html lang="en">
             <div style={{width: '100%', height:"100%", backgroundColor: "white", display: 'flex', justifyContent: 'center', alignItems: "center"}}>
-                <div style={{width: '66.666667%', height: '100%', position: 'relative', background: 'black'}}>
+                <div style={{width: '100%', height: '100%', position: 'relative', background: 'black'}}>
                     <div style={{justifyContent: "center", alignItems: "center"}}>
                         <div style={{width: 564, height: 91, left: 21, top: 20, paddingLeft:"110px", paddingTop: "25px", textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word'}}>New Order from {name}, Time: {currTime()}</div>
                         {/* <div style={{width: 440, height: 0, left: 85, top: 124, paddingLeft:"110px", border: '3px white solid'}}></div> */}

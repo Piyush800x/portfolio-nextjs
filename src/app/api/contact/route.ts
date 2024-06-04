@@ -2,7 +2,9 @@
 import nodemailer from 'nodemailer';
 import { type NextRequest, NextResponse } from 'next/server';
 import Mail from 'nodemailer/lib/mailer';
-
+import { render } from '@react-email/render';
+import { MailTemplateContactClient } from '@/components/Mail/MailTempContactClient';
+import { MailTemplateContactSelf } from '@/components/Mail/MailTempContactSelf';
 
 export async function POST(req: NextRequest) {
     if (req.method != 'POST')   {
@@ -19,17 +21,15 @@ export async function POST(req: NextRequest) {
         },
     });
 
+    const emailHtmlClient = render(MailTemplateContactClient({name: name}))
+    const emailHtmlSelf = render(MailTemplateContactSelf({name: name, email: email, subject: subject}))
+
     // Mail to self
     const mailToSelf: Mail.Options = {
         from: process.env.BUSINESS_MAIL,
         to: process.env.MY_EMAIL,
         subject: `Contact from ${name} |  number: ${subject}, email: ${email}`,
-        html: `
-        <h1>Hire Me Form Submission</h1>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        `
+        html: emailHtmlSelf
     };
 
     // Send email to client
@@ -37,13 +37,7 @@ export async function POST(req: NextRequest) {
         from: process.env.BUSINESS_MAIL,
         to: email,
         subject: `You have reached Piyush Paul`,
-        html: `
-        <h1>Thank you for your interest!</h1>
-        <h1>We will get back to you soon</h1>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        `
+        html: emailHtmlClient
     }
 
     // Send mail

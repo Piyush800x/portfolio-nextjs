@@ -6,8 +6,8 @@ import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Portfolio website created by Piyush Paul",
+  title: "Piyush Paul - Full Stack Web Developer & Web Scraping Specialist",
+  description: "Welcome to Piyush Paul's portfolio. I am a student specializing in creating full stack web applications with Next.js, proficient in web scraping using Python, and exploring Rust. Check out my latest project: a wallpaper app built with Tauri, Rust, and React. Let's collaborate and bring your ideas to life!",
 };
 
 export default function RootLayout({
