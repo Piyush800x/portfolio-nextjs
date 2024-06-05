@@ -3,8 +3,8 @@ import nodemailer from 'nodemailer';
 import { type NextRequest, NextResponse } from "next/server";
 import Mail from 'nodemailer/lib/mailer';
 import { render } from '@react-email/render';
-import {MailTemplate} from '@/components/MailTemplateClient';
-import { MailTemplateSelf } from '@/components/MailTemplateSelf';
+import {MailTemplate} from '@/components/Mail/MailTemplateClient';
+import { MailTemplateSelf } from '@/components/Mail/MailTemplateSelf';
 
 
 export async function POST(req: NextRequest) {
