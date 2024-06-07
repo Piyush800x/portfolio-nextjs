@@ -42,7 +42,7 @@ export default function Hero() {
                     <div className="flex flex-col justify-between items-center bg-black text-white p-4 md:flex-row md:justify-between md:items-center">
                         <span className='text-white font-medium text-xl text-center md:text-center md:ml-10 ml-0'>Participated in</span>
                         <div className='flex flex-wrap justify-center md:justify-end mt-4 md:mt-0 md:space-x-10 mb-10 md:mr-10'>
-                            <Image className='grayscale' src={'img/SIH_Logo.svg'} alt='SIH' width={238} height={103}/>
+                            {/* <Image className='grayscale' src={'img/SIH_Logo.svg'} alt='SIH' width={238} height={103}/> */}
                             <Image className='grayscale' src={'img/JISTECH.svg'} alt='SIH' width={216} height={104}/>
                         </div>
                     </div>
