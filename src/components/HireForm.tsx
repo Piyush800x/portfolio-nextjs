@@ -66,12 +66,12 @@ export default function HireForm() {
         // console.log(formData)
         setIsLoading(false);
     }
-    // fix hydration error
+
     return (
         <div className="relative h-full w-screen overflow-hidden bg-black">
             <div className={`${poppins.className} flex flex-col text-white justify-center`}>
                 <div className="flex flex-col justify-center pt-10 items-center">
-                    <h1 className="font-semibold md:text-7xl text-5xl mb-6 tracking-wide">WANNA HIRE ME?</h1>
+                    <h1 className="font-semibold md:text-7xl text-5xl mb-6 tracking-wide">WANT TO HIRE ME?</h1>
                     <div className='w-52 h-px bg-white items-center'></div>
                 </div>
                 <div className="flex justify-center">

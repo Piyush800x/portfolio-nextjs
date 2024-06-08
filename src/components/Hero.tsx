@@ -17,7 +17,7 @@ export default function Hero() {
         <div className={bai_Jamjuree.className}>
             <div>
                 <div className="flex flex-col justify-center items-center bg-black">
-                    <Image className="grayscale rounded-full mt-16 mb-6 " src={'/img/self-new.webp'} alt="alt" width={420} height={420}/>
+                    <Image className="grayscale rounded-full mt-16 mb-6 hover:filter-none duration-100 ease-in-out invert-on-hover" src={'/img/self-new.webp'} alt="alt" width={420} height={420}/>
                     <div className="mt-5 font-bold leading-normal sm:text-7xl text-4xl bg-gradient-to-r from-15 from-purple-400 via-red-400 via-55 to-yellow-400 to-100 inline-block text-transparent bg-clip-text text-center">
                         <span className="">Hello, </span>
                         <span>{"I'm"} </span>

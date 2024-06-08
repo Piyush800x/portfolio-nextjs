@@ -3,7 +3,14 @@ import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 import ProjectCard from "@/components/Projects/ProjectCard"
 import ProjectCardInv from "@/components/Projects/ProjectCardInverted"
+import { Metadata } from "next"
 import { Plus_Jakarta_Sans } from "next/font/google"
+
+export const metadata: Metadata = {
+    title: {
+        absolute: "Piyush Paul - Projects"
+    }
+}
 
 const plus_Jakarta_Sans = Plus_Jakarta_Sans({
     subsets: ["latin"],

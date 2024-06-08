@@ -17,7 +17,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-row gap-x-10">
                     <Link href='/' className="cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110">Home</Link>
-                    <Link href='/about' className="cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110">About</Link>
+                    <Link href='/projects' className="cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110">Projects</Link>
                     <Link href='/contact' className="cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110">Contact me</Link>
                 </div>
             </div>

@@ -20,10 +20,10 @@ const Navbar: React.FC = () => {
     <nav className="bg-black text-white py-4 px-6 flex justify-between items-center sticky z-10">
       <div className="text-2xl invert-on-hover">PIYUSH PAUL</div>
       <div className="hidden md:flex space-x-6">
-          <Link href="/" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Home</Link>
-          <Link href="/projects" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Projects</Link>
+          <Link href="/" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 text-lg'>Home</Link>
+          <Link href="/projects" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 text-lg'>Projects</Link>
           {/* <Link href="/about" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>About</Link> */}
-          <Link href="/contact" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110'>Contact</Link>
+          <Link href="/contact" className='cursor-none transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 text-lg'>Contact</Link>
       </div>
       <button className="cursor-none hidden md:block border-2 hover:border-white hover:bg-black hover:text-white bg-white text-black py-2 px-4 rounded-full text-lg font-medium transition ease-in-out duration-300">
         <Link className='cursor-none' href="/hireme">HIRE ME</Link>
