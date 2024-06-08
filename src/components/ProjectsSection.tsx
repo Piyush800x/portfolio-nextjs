@@ -1,6 +1,6 @@
 import { Bai_Jamjuree } from "next/font/google"
-import ProjectCard from "./ProjectCard"
 import ProjectCardNew from "./ProjectCardNew"
+import ProjectCard2 from "./ProjectCard2"
 
 export const bai_Jamjuree = Bai_Jamjuree({
     subsets: ['latin'],
@@ -17,19 +17,20 @@ export default function ProjectSection() {
                     <span className="font-semibold bg-gradient-to-r from-15 from-purple-400 via-red-400 via-55 to-yellow-400 to-100 inline-block text-transparent bg-clip-text">Projects.</span>
                 </div>
             </div>
-            <div className="flex flex-row bg-black gap-x-10 justify-between pb-20">
+            {/* <div className="flex flex-row bg-black gap-x-10 justify-between pb-20">
                 <ProjectCard/>
                 <ProjectCard/>
             </div>
             <div className="flex flex-row bg-black gap-x-10 justify-between pb-20">
                 <ProjectCard/>
                 <ProjectCard/>
-            </div>
-            {/* <div className="flex flex-row bg-black text-white">
-                <ProjectCardNew/>
-                <ProjectCardNew/>
-                <ProjectCardNew/>
             </div> */}
+            <div className="flex flex-row bg-black text-white">
+                <div className="mx-7 w-full flex md:flex-row flex-col">
+                    <ProjectCardNew/>
+                    <ProjectCard2/>
+                </div>
+            </div>
         </>
     )
 }
