@@ -1,5 +1,6 @@
 import { Bai_Jamjuree } from "next/font/google"
 import ProjectCard from "./ProjectCard"
+import ProjectCardNew from "./ProjectCardNew"
 
 export const bai_Jamjuree = Bai_Jamjuree({
     subsets: ['latin'],
@@ -24,6 +25,11 @@ export default function ProjectSection() {
                 <ProjectCard/>
                 <ProjectCard/>
             </div>
+            {/* <div className="flex flex-row bg-black text-white">
+                <ProjectCardNew/>
+                <ProjectCardNew/>
+                <ProjectCardNew/>
+            </div> */}
         </>
     )
 }

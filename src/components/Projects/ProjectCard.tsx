@@ -5,7 +5,7 @@ export default function ProjectCard() {
         <div className="">
             <div className="bg-black text-white flex md:flex-row flex-col md:justify-between justify-center px-5 py-10">
                 <div className="md:w-1/2">
-                    <h1 className="md:text-8xl text-6xl pt-2">Portfolio Website</h1>
+                    <h1 className="md:text-7xl text-6xl pt-2">Personal Portfolio</h1>
                     <p className="md:text-2xl text-xl pl-1 pt-5">Created a dynamic and visually appealing portfolio website using Next.js and Tailwind CSS, deployed seamlessly on Vercel.</p>
                     {/* TECH STACK IMAGES */}
                     <div className="flex flex-row gap-x-5">
@@ -15,8 +15,8 @@ export default function ProjectCard() {
                     </div>
                 </div>
                 {/* IMAGE */}
-                <div className="border border-1 border-white">
-                    <Image src={"/img/projects/portfolio.webp"} alt="Img" width={720} height={480}/>
+                <div className="border border-1 border-white rounded-2xl overflow-hidden">
+                    <Image src={"/img/projects/portfolio/portfolio.webp"} alt="Img" width={720} height={480}/>
                 </div>
             </div>
             <div className="flex justify-center items-center">
