@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjectCardInv() {
     return (
@@ -18,6 +19,9 @@ export default function ProjectCardInv() {
                         <div><Image className="pt-6 mt-2 ml-5" src={"/img/projects/freshpaper/tailwind_logo.svg"} alt="tailwindcss" width={100} height={100} /></div>
                         <div><Image className="pt-6 ml-3" src={"/img/projects/freshpaper/react.webp"} alt="react" width={80} height={80} /></div>
                     </div>
+                    <button className="cursor-none border-2 font-medium text-lg hover:border-white hover:bg-black hover:text-white bg-white text-black py-2 px-4 rounded-full transition duration-300">
+                        <Link className='cursor-none' href="https://github.com/Piyush800x/FreshPaper/releases/download/0.1/FreshPaper_0.0.5_x64_en-US.msi">Download</Link>
+                    </button>
                 </div>
             </div>
             <div className="flex justify-center items-center">

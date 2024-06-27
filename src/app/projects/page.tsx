@@ -9,7 +9,8 @@ import { Plus_Jakarta_Sans } from "next/font/google"
 export const metadata: Metadata = {
     title: {
         absolute: "Piyush Paul - Projects"
-    }
+    },
+    description: "Some of my highlighted Projects."
 }
 
 const plus_Jakarta_Sans = Plus_Jakarta_Sans({

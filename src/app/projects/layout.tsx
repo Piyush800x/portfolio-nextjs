@@ -2,17 +2,17 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: {
-        default: "Piyush Paul - Contact",
+        default: "Piyush Paul - Projects",
         template: "%s | Piyush Paul"
     },
-    description: "Contact me for more infromation.",
+    description: "Some of my highlighted Projects.",
     openGraph: {
-        title: "Piyush Paul - Contact",
-        description: "Contact me to fulfill your quaries",
+        title: "Piyush Paul - Projects",
+        description: "Some of my highlighted Projects",
         type: "website",
         locale: "en_US",
-        url: `${process.env.SITE_URL}/contact`,
-        siteName: "Piyush Paul - Contact"
+        url: `${process.env.SITE_URL}/projects`,
+        siteName: "Piyush Paul - Projects"
     }
 }
 

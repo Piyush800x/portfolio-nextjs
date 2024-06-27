@@ -7,7 +7,8 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: {
         absolute: "Piyush Paul - Hire Me"
-    }
+    },
+    description: "Hire me to get a Premium looking website!"
 }
 
 export default function HireMePage() {
