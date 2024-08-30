@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: "Contact me for more infromation.",
     openGraph: {
         title: "Piyush Paul - Contact",
-        description: "Contact me to fulfill your quaries",
+        description: "Contact me to fulfill your queries",
         type: "website",
         locale: "en_US",
         url: `${process.env.SITE_URL}/contact`,
